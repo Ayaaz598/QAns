@@ -1,0 +1,31 @@
+.card .card-title{
+    background-color: transparent;
+    text-align: center;
+}
+.card .card-title h1{
+    color: aqua;
+}
+.card .card-title img{
+    width: 40%;
+    height: 40%;
+} 
+.card .card-title .card-body{
+    display: flex;
+    flex-direction: column;
+}
+.card .card-title button{
+    width: 20%;
+    padding: 1% 2%;
+    margin: 2%;
+}
+.card{
+    margin-top: 5%;
+    padding: 2%;
+    border: 2px solid ;
+    background-color: white;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
