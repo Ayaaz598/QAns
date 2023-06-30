@@ -1,19 +1,30 @@
-<nav class="navbar navbar-expand-lg navbarScroll ">
-    <div class="container" style="font-size: 15px;">
-        <a class="navbar-brand" style="color:#000; font-size:20px" href="#">QAns</a>
-        <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon" style="background-color: #ffffff; border-radius: 10px;"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" style="color:navy;" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" style="color:navy;" routerLink="/login">Login</a>
-                </li>
-            </ul>
-            
-        </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="" routerLinkActive="active-link">
+        <img src="../../../assets/images/logo.png" alt="connection the connection" style="width:5rem; margin-right:0.9rem">
+        <b>Quick<span style="color: navy;">Answers</span></b></a>
+      <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          
+          <li class="nav-item">
+            <a class="nav-link" routerLink="../" routerLinkActive="active-link" ><b>Home</b></a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active-link" ><b>About us</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active-link" ><b>Contact us</b></a>
+          </li> -->
+          <li class="nav-item">
+           <button class="btn btn-outline-primary" style="margin-right: 0.9rem; margin-bottom:0.5rem" (click)="login()"><b>Login</b></button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-primary" (click)="register()"><b>Register</b></button>
+          </li>
+        </ul>  
+      </div>
     </div>
-</nav>
+  </nav>

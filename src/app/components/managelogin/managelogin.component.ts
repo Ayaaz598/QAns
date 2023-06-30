@@ -4,11 +4,11 @@ import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
 import { LoginService } from 'src/app/services/login.service';
 @Component({
-  selector: 'app-registerbody',
-  templateUrl: './registerbody.component.html',
-  styleUrls: ['./registerbody.component.css']
+  selector: 'app-managelogin',
+  templateUrl: './managelogin.component.html',
+  styleUrls: ['./managelogin.component.css']
 })
-export class RegisterbodyComponent {
+export class ManageloginComponent {
   loginuser!: FormGroup;
   public inputType:string='password';
   user:User=new User();
@@ -32,7 +32,7 @@ export class RegisterbodyComponent {
       
      });    
     if(this.loginuser.valid){
-     this.route.navigateByUrl('/login'); 
+     this.route.navigateByUrl('/manage'); 
        }
        else
        {

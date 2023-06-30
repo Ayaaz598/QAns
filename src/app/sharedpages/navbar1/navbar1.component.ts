@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar1.component.css']
 })
 export class Navbar1Component {
-
+myfun(){
+  
+}
 }

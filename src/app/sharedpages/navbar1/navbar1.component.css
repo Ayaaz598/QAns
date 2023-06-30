@@ -3,5 +3,13 @@
     flex-direction: row;
     /* justify-content: space-between; */}
 .form-inline input{
-    margin-left: 15%;
+    margin-right: 5%;
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.navbar-nav .btn-group{
+    margin-right: 1rem;
 }

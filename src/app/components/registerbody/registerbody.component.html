@@ -1,21 +1,42 @@
-<section class="register">
-    <div class="card">
-        <div class="card-title">
-            <h1>Registration Details</h1>
-            <img src="../../../assets/images/user.png" alt="">
-            <form action="">
-                <div class="card-body">
-                    <label style="color: aqua; font-weight:bold" for=""><b>Username : </b></label>
-                    <input class="form-control" type="text" name="" id="" placeholder="Enter your username" required>
-                    <label style="color: aqua; font-weight:bold" for=""><b>Username : </b></label>
-                    <input class="form-control" type="text" name="" id="" placeholder="Enter your username" required>
-                    <label style="color:aqua;" for=""><b>Password : </b></label>
-                    <input class="form-control" type="password" placeholder="Enter your password" required>
-                </div>
+<section class="vh-95">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            <form [formGroup]="loginuser" (ngSubmit)="onlogin()">
+
+            <h2 class="mb-5"><b>Registration Page</b></h2>
+            <hr class="my-4">
+            <div class="form-outline mb-4">
+              <input type="email" id="typeEmailX-2" class="form-control form-control-lg" formControlName="email" name="email" type="email" name="email" placeholder="Email"
+              [(ngModel)]="user.email"/>
+              <label class="form-label" for="typeEmailX-2">Email</label>
+              <small *ngIf="loginuser.controls['email'].dirty && loginuser.hasError('required','email')"
+              class="text-danger"> - Enter vaild email</small>
+            </div>
+            <div class="form-outline mb-4">
+              <input type="password" id="typePasswordX-2" class="form-control form-control-lg" formControlName="password" name="password" [type]="inputType" name="Password"
+              placeholder="Password" [(ngModel)]="user.password" />
+              <label class="form-label" for="typePasswordX-2">Password</label>
+              <small *ngIf="loginuser.controls['password'].dirty && loginuser.hasError('required','password')"
+              class="text-danger"> - Check the Password</small>            </div>
+            <div class="form-outline mb-4">
+              <input type="password" id="typePasswordX-2" class="form-control form-control-lg" formControlName="password" name="password" [type]="inputType" name="Password"
+              placeholder="Password" [(ngModel)]="user.password" />
+              <label class="form-label" for="typePasswordX-2">Repeat Password</label>
+              <small *ngIf="loginuser.controls['password'].dirty && loginuser.hasError('required','password')"
+              class="text-danger"> - Check the Password</small>
+            </div>
+
+            <button class="btn btn-primary btn-lg btn-block" type="submit"><b>Register</b></button>
+
             </form>
-            <button class="btn btn-outline-success">Register</button>
-            <p>Already had an account <a routerLink="../login/">Login</a></p>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
+
 <router-outlet></router-outlet>

@@ -10,7 +10,10 @@ export class NavbarComponent {
   constructor(private route:Router){}
   ngOnInint():void{ 
   }
-  logout(){
+  login(){
     this.route.navigateByUrl('login');
+  }
+  register(){
+    this.route.navigateByUrl('register');
   }
 }

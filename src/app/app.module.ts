@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +20,12 @@ import { Main2bodyComponent } from './components/main2body/main2body.component';
 import { QueryComponent } from './components/query/query.component';
 import { Main3Component } from './components/main3/main3.component';
 import { Main3bodyComponent } from './components/main3body/main3body.component';
+import { FooddeptComponent } from './components/fooddept/fooddept.component';
+import { LibdeptComponent } from './components/libdept/libdept.component';
+import { HosteldeptComponent } from './components/hosteldept/hosteldept.component';
+import { TransportdeptComponent } from './components/transportdept/transportdept.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { ManageloginComponent } from './components/managelogin/managelogin.component';
 
 @NgModule({
   declarations: [
@@ -34,11 +43,20 @@ import { Main3bodyComponent } from './components/main3body/main3body.component';
     Main2bodyComponent,
     QueryComponent,
     Main3Component,
-    Main3bodyComponent
+    Main3bodyComponent,
+    FooddeptComponent,
+    LibdeptComponent,
+    HosteldeptComponent,
+    TransportdeptComponent,
+    WelcomeComponent,
+    ManageloginComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
